@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>if</title>
+<style>
+    body {
+   background: rgb(48, 213, 200);
+    }
+   </style>
+</head>
+<body>
+<script language="JavaScript" type="text/JavaScript">
+var x, y, password;
+password=321;
+x=parseInt(prompt("Введите значение х",'')); // метод parseInt() переводит строку в целое
+y=parseInt(prompt("Введите значение у",'')); // число
+if(x<y)
+{
+alert(" Максимальное число - y");
+}
+else if(x>y)
+{
+alert(" Максимальное число - x");
+}
+else
+{
+    alert("Числа равны");
+}
+b=parseInt(prompt("Введите пароль","Подсказка: курс и группа студента, выполнившего эту лр"));
+if(b==password)
+{
+    alert("пароль верный");
+}
+else
+{
+    alert("Пароль не верен");
+}
+</script>
+</body>
+</html> 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+        background: rgb(48, 103, 200);
+        }
+       </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Степени двойки</title>
+</head>
+<body>
+   <script> document.write('<table border="1" style="border-collapse: collapse; text-align: right">');
+   document.write('<tr><td style="width: 100px">Степень </td><td style="width: 100px">Результат</td></tr>');
+        for(var i=0; i<6; i++) {
+            document.write('<tr><td style="width: 100px">2 <sup>'+i+'</sup></td><td style="width: 100px">'+Math.pow(2,i)+'</td></tr>');
+        }
+        document.write('</table>');
+    </script>
+</body>
+</html>
