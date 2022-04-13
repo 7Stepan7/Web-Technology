@@ -1,0 +1,91 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Степанян Степан</title>
+ <link rel="stylesheet" href="mystyle.css" type="text/css"/> 
+<style>
+
+</style>
+ </head>
+ <body>
+
+    <div>Имя</div>
+    <input type="text" name="name" id="name" class="com">
+	<br><br>
+	
+	
+	 <div>Пароль</div> 
+	<input type="password" name="pass" id="pass" maxlength="10" class="com" >
+	<br><br>
+	
+	 <div>Подтверждение пароля</div>
+	<input type="password" name="trypass" id="trypass" class="com">
+	<br><br>
+	
+	 <div>Email</div>
+	<input type="text" name="email" id="email" class="com">
+	<br><br>
+	
+	 <div>Тема сообщения</div>
+	<input type="text" name="tema" id="tema"  class="com">
+	<br><br>
+	
+	 <div>Сообщение</div>
+	 <textarea name="message" id="mess"  class="com"></textarea>
+   
+  <p><button id = "but_go"> Отправить </button>
+  <button id = "but_cl"> Очистить </button> </p>
+	
+  <script type="text/javascript" src="libs/jquery-3.6.0.min.js"></script>
+ <script type="text/javascript">
+
+$(document).ready(function(){
+
+
+$('#but_go').on('click', function(){
+let min = $('#pass').val().length;
+
+if($('#name').val()==''){
+$('#name').css('border-color','#ff8080');
+}else{
+$('#name').css('border-color','#000000');
+}
+
+
+if( min < 4 || $('#pass').val() !== $('#trypass').val()){
+$('#pass').css('border-color','#ff8080');
+$('#trypass').css('border-color','#ff8080');
+}else{
+$('#pass').css('border-color','#000000');
+$('#trypass').css('border-color','#000000');
+}
+
+if($('#email').val()=='' || $('#email').val().indexOf('@')+1 ==0 ){
+$('#email').css('border-color','#ff8080');
+}else{
+$('#email').css('border-color','#000000');
+}
+
+if($('#mess').val().length < 10 ){
+$('#mess').css('border-color','#ff8080');
+}else{
+$('#mess').css('border-color','#000000');
+}
+
+
+});
+
+$('#but_cl').on('click', function(){
+	
+	$('.com').val('');
+});
+
+});
+
+ </script>
+ 
+   
+   
+
+ </body>
+</html>

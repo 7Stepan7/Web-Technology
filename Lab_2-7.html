@@ -1,0 +1,269 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Степанян Степан</title>
+
+<style>
+fieldset {
+  background-color: RGB(249, 201, 16);
+  font-size:16px; 
+  padding:12px; 
+  width:280px;
+
+}
+legend {
+  background-color: red;
+  color: black;
+  padding: 5px 10px;
+}
+input {
+  margin: 5px;
+}
+.but_ravno {
+    width: 163px;
+    height: 22px;
+	 margin: 5px 5px;
+}
+
+.but_num {
+    width: 30px;
+    height: 22px;
+	 margin: 5px 5px;
+	  margin-bottom: 22px;
+ 
+    -webkit-box-shadow: 0 1px 1px #fff;
+    -moz-box-shadow:  0 1px 1px #fff;
+    box-shadow:  1px 1px 0 #fff, inset 0 1px 1px rgba(0, 0, 0, 0.3);
+	
+}
+
+.but_zero {
+    width: 74px;
+    height: 22px;
+	 margin: 5px 5px;
+	  margin-bottom: 22px;
+ 
+    -webkit-box-shadow: 0 1px 1px #fff;
+    -moz-box-shadow:  0 1px 1px #fff;
+    box-shadow:  1px 1px 0 #fff, inset 0 1px 1px rgba(0, 0, 0, 0.3);
+	
+}
+  </style>
+    <script type="text/javascript" src="libs/jquery-3.6.0.min.js"></script>
+ </head>
+ <body>
+ <fieldset>
+ <legend> Калькулятор </legend>
+<input type="text" id="pole">
+<button id="b1"><<</button>
+<button id="del">C</button>
+<br>
+<button id="1" class="but_num">1</button>
+<button id="2" class="but_num">2</button>
+<button id="3" class="but_num">3</button>
+<button id="pl" class="but_num">+</button>
+<br>
+<button id="4" class="but_num">4</button>
+<button id="5" class="but_num">5</button>
+<button id="6" class="but_num">6</button>
+<button id="mi" class="but_num">-</button>
+<br>
+<button id="7" class="but_num">7</button>
+<button id="8" class="but_num">8</button>
+<button id="9" class="but_num">9</button>
+<button id="mu" class="but_num">*</button>
+<br>
+<button id="0" class="but_zero">0</button>
+<button id="t" class="but_num">.</button>
+<button id="de" class="but_num">/</button>
+<br>
+<button id="r" class="but_ravno">=</button>
+
+   </fieldset>
+
+ <script type="text/javascript">
+
+$(document).ready(function(){
+let i=0;
+var nums=['+'];
+let k='';
+let p = 0;
+let sum=0;
+let val=0;
+let valg="";
+
+
+
+$('#pole').prop('readonly','readonly');
+
+$('#1').on('click', function(){
+$('#pole').val($('#pole').val()+"1");
+k='1';
+nums[i]=nums[i]+k;
+ });
+ 
+ $('#2').on('click', function(){
+$('#pole').val($('#pole').val()+"2");
+k='2';
+nums[i]=nums[i]+k;
+ });
+ 
+ $('#3').on('click', function(){
+$('#pole').val($('#pole').val()+"3");
+k='3';
+nums[i]=nums[i]+k;
+ });
+ 
+ 
+ $('#4').on('click', function(){
+$('#pole').val($('#pole').val()+"4");
+k='4';
+nums[i]=nums[i]+k;
+ });
+ 
+ $('#5').on('click', function(){
+$('#pole').val($('#pole').val()+"5");
+k='5';
+nums[i]=nums[i]+k;
+ });
+ 
+ $('#6').on('click', function(){
+$('#pole').val($('#pole').val()+"6");
+k='6';
+nums[i]=nums[i]+k;
+ });
+ 
+ $('#7').on('click', function(){
+$('#pole').val($('#pole').val()+"7");
+k='7';
+nums[i]=nums[i]+k;
+ });
+ 
+ $('#8').on('click', function(){
+$('#pole').val($('#pole').val()+"8");
+k='8';
+nums[i]=nums[i]+k;
+ });
+ 
+ $('#9').on('click', function(){
+$('#pole').val($('#pole').val()+"9");
+k='9';
+nums[i]=nums[i]+k;
+ });
+ 
+  $('#0').on('click', function(){
+$('#pole').val($('#pole').val()+"0");
+k='0';
+nums[i]=nums[i]+k;
+ });
+ 
+   $('#pl').on('click', function(){
+$('#pole').val($('#pole').val()+"+");
+i++;
+nums[i]='+';
+ });
+ 
+ $('#mi').on('click', function(){
+$('#pole').val($('#pole').val()+"-");
+
+i++;
+nums[i]="-";
+ });
+ 
+  $('#mu').on('click', function(){
+$('#pole').val($('#pole').val()+"*");
+i++;
+nums[i]='*';
+ });
+ 
+ $('#de').on('click', function(){
+$('#pole').val($('#pole').val()+"/");
+i++;
+nums[i]='/';
+ });
+ 
+ $('#del').on('click', function(){
+$('#pole').val("");
+nums.length=0;
+i=0;
+nums[i]='+';
+ });
+ 
+ $('#t').on('click', function(){
+$('#pole').val($('#pole').val()+".");
+k='.';
+nums[i]=nums[i]+k;
+ });
+ 
+ 
+ $('#b1').on('click', function(){
+$('#pole').val(
+    function(index, value){
+        return value.substr(0, value.length - 1);
+});
+
+nums[i]=nums[i].substring(0, nums[i].length - 1);;
+ });
+ 
+ $('#r').on('click', function(){
+
+ sum=0;
+
+
+$.each(nums, function (index, value) {
+
+if(value.indexOf("+-")>-1){
+valg= value.slice(2);
+valg=parseFloat(valg);
+sum=sum+valg;
+}
+
+ if(value.indexOf('*')>-1){
+valg= value.slice(1);
+val=parseFloat(valg);
+sum=sum*val;
+}
+if(value.indexOf('/')>-1){
+valg= value.slice(1);
+val=parseFloat(valg);
+sum=sum/val;
+}
+
+if(value.indexOf("-")>0){
+valg= value.slice(3);
+valg=parseFloat(value);
+sum=sum+valg;
+}
+
+if(value.indexOf("-")>-1){
+valg=parseFloat(value);
+sum=sum+valg;
+}
+
+if(value.indexOf('+')>-1){
+valg= value.slice(1);
+val=parseFloat(valg);
+sum=sum+val;
+}
+});
+
+
+nums.length=0;
+i=0;
+$('#pole').val(sum);
+if(sum<0){
+nums[i]=""+sum;
+}else if (sum>=0){
+nums[i]="+"+sum;
+}
+
+
+ });
+ });
+ </script>
+ 
+   
+   
+
+ </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Степанян Степан</title>
+ <link rel="stylesheet" href="mystyle.css" type="text/css"/> 
+<style>
+  img{
+    position: absolute;
+    background-color: #abc;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+  }
+  </style>
+    <script type="text/javascript" src="libs/jquery-3.6.0.min.js"></script>
+ </head>
+ <body>
+
+  
+  
+  <button id = "but_up"> Up</button>
+  <button id = "but_down"> Down</button>
+  <button id = "but_left"> Left</button>
+  <button id = "but_right"> Right</button>
+  <p></p>
+ <img src="images/mig-19.jpg" alt="" id="mig" class="air" >
+ 
+
+ <script type="text/javascript">
+
+$(document).ready(function(){
+
+$('#but_down').on('click', function(){
+ $( ".air" ).animate({"bottom": "-=100px" }, 1500 );
+
+});
+
+$('#but_up').on('click', function(){
+ $( ".air" ).animate({"bottom": "+=100px" }, 1500 );
+
+});
+
+$('#but_left').on('click', function(){
+ $( ".air" ).animate({"left": "-=100px" }, 1500 );
+
+});
+
+$('#but_right').on('click', function(){
+ $( ".air" ).animate({"left": "+=100px" }, 1500 );
+
+});
+});
+
+ </script>
+ 
+   
+   
+
+ </body>
+</html>
