@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Степанян Степан</title>
+</head>
+ <body link="red" vlink="#cecece" alink="#ff0000" bgcolor="black">
+		<script>
+			let tek = 5;
+			function isl(str) {
+				if (str.length==0) {
+    document.getElementById("isk").innerHTML="";
+    return;}
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+  } else {  
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("isk").innerHTML=this.responseText;}}
+			   xmlhttp.open("GET","rss.php?tek="+tek,true);
+			   xmlhttp.send();
+			   tek+=5;}
+		 </script>
+	</head>
+	<body style="background-image: url(images/v2.jpg);background-size: 100%;">
+	
+<BODY BGCOLOR="#ff240">
+<CENTER>
+		<FONT COLOR="#c0c0c0"><h1>Актуальные новости</h1></FONT>
+<HR NOSHADE>
+<FONT COLOR="#c0c0c0">
+			<h2>CD Projekt RED: мы анонсировали не The Witcher 4, это новая сага во вселенной</h2>
+			<img src="https://static9.stcont.com/datas/photos/240x160/d1/9f/c359b77a50298ddd0791860b5e6b.jpg?1"><br>
+			<a href="https://www.igromania.ru/news/114630/CD_Projekt_RED_my_anonsirovali_ne_The_Witcher_4_yeto_novaya_saga_vo_vselennoy.html">Подробнее</a><br>
+
+			<h2>УГАТУ встречает День Победы</h2>
+			<img src="images/USATU.jpg"><br>
+			<a href="https://vk.com/wall-87342965_45067">Подробнее</a><br>
+
+			<h2>Как уберечься от укуса клеща: 6 главных правил</h2>
+			<img src="images/Klesh.jpg"><br>
+			<a href="https://rg.ru/2019/05/17/kak-uberechsia-ot-ukusa-kleshcha-6-glavnyh-pravil.html">Подробнее</a><br>
+
+			<h2>Город ухи, арбузов и хороших людей:что туристу делать в Волгограде</h2>
+			<img src="images/volg.jpg" ><br>
+			<a href="https://ria.ru/20220509/volgograd-1786992680.html">Подробнее</a><br>
+
+			<h2>Польша заявила об отказе от новых закупок газа в России</h2>
+			<img src="https://icdn.lenta.ru/images/2022/03/17/15/20220317154627003/owl_detail_240_217f0b99b13a20501a4e8d6dd2196047.jpg" ><br>
+			<a href="https://lenta.ru/news/2022/03/17/kontrakt_wygasa/">Подробнее</a><br>
+
+		<span id = "isk"></span>
+
+<HR NOSHADE>
+		<div id="more"  style="display:none;" class="answer_list" >
+
+			<h2>Радость, скорбь, отрицание: как соседи России отмечают День Победы</h2>
+			<img src="images/123.jpg"><br>
+			<a href="https://ria.ru/20220508/prazdnik-1786009397.html">Подробнее</a><br>
+
+			<h2>"Библия указывает на них однозначно". Были ли у Христа потомки</h2>
+			<img src="images/krest.jpg"><br>
+			<a href="https://ria.ru/20220508/potomki-1787281344.html">Подробнее</a><br>
+
+			<h2>Андрей Рублев опередил Даниила Медведева в чемпионской гонке АТР</h2>
+			<img src="images/medved.jpg"><br>
+			<a href="https://rsport.ria.ru/20220509/tennis-1787590419.html">Подробнее</a><br>
+
+			<h2>"Челси" сообщил о продаже клуба американскому бизнесмену Боули</h2>
+			<img src="images/chelsea.jpg" ><br>
+			<a href="https://rsport.ria.ru/20220507/futbolk-1787340758.html?rcmd_alg=COL6&rcmd_id=1787554359">Подробнее</a><br>
+
+			<h2>Польша заявила об отказе от новых закупок газа в России</h2>
+			<img src="images/ufc.jpg" ><br>
+			<a href="https://rsport.ria.ru/20220508/ufc-1787457899.html">Подробнее</a><br>
+ </div>
+ </FONT>
+<input type="button" name="answer" value="Показать еще" onclick="ShowMore()"  />
+<script>
+function ShowMore() {
+   document.getElementById('more').style.display = "block";
+}
+</script>
+		<br>
+</CENTER>
+
+	</body>
+	</html> 

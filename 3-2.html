@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Степанян С.А</title>
+</head>
+<body>
+
+
+
+<BODY BACKGROUND="images/UVC.jpg">
+	<CENTER><FONT COLOR="#D2691E"><FONT SIZE="+3"><h2>Время для обратной связи!</h2>
+<h2>Дорогие студенты и преподаватели!</h2></FONT>
+<FONT COLOR="#000000">
+<h3>Совсем недавно на площади нашего с Вами университета прошла военнизированная эстафета. Просим вас написать пару слов по прошедшему мероприятию по форме ниже</h3>
+</FONT>
+		<img src="images/UVC2.jpg">
+		<FONT COLOR="	#0000ff">
+	<h2 align="right">Форма для отзыва
+	<form action="" method="post">
+  <table align="right">
+    <tbody>
+      <tr>
+        <td>ФИО, факультет и группа :</td>
+        <td>
+          <input type="text" name="name" id="name"/>
+        </td>
+      </tr>
+      <tr>
+        <td>Email :</td>
+        <td>
+     <input type="text" name="email" id="email"/>
+        </td>
+      </tr>
+      <tr>
+        <td>Отзыв :</td>
+        <td>
+     <input type="text" name="comment" id="comment"/>
+        </td>
+      </tr>
+	  
+    </tbody>
+  </table>
+</form>
+<br><br><br><br><div id="search_place" style="float:right;">
+<input  onclick = "ot(this.value)" type="button" value="Отправить" align="middle">
+</div>
+	<span id = "tut"></span> 
+<script>
+		let tek = 3;
+	window.addEventListener("load",function() {
+  var request = new XMLHttpRequest();
+  request.open('GET','com.php',true);
+  request.addEventListener('readystatechange', function() {
+    if ((request.readyState==4) && (request.status==200)) {
+      var welcome = document.getElementById('tut');
+      welcome.innerHTML = request.responseText;
+    }
+  });
+request.send();
+});
+    function ot(str) {
+      alert("Спасибо за отзыв! Успешно отправлен!");
+		if (str.length==0) {
+    document.getElementById("tut").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+  } else {  
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("tut").innerHTML=this.responseText;
+    }
+
+  }
+  tek+=1;
+  var nam = document.getElementById("name").value, email = document.getElementById("email").value, comment=document.getElementById("comment").value;
+var variables = "tek="+tek+"&name="+nam+"&email="+email+"&comment="+comment;
+			   xmlhttp.open("GET","comm.php?"+variables,true);
+			   xmlhttp.send();
+}
+</script>
+
+</body>
+</html> 
