@@ -1,15 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
+
+<head> 
+<style>
+   .stroke {
+    font: 2em Arial, sans-serif;
+    text-shadow: black 0 0 5px;
+   }
+  </style>
+  <style>
+.button {
+    background-color: 	#0000ff;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button3 {padding: 14px 40px;}
+</style>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Степанян С.А</title>
+	
 </head>
+
 <body>
-
-
-
+<p class="stroke">Контурный текст</p>
 <BODY BACKGROUND="images/UVC.jpg">
 	<CENTER><FONT COLOR="#D2691E"><FONT SIZE="+3"><h2>Время для обратной связи!</h2>
 <h2>Дорогие студенты и преподаватели!</h2></FONT>
@@ -17,10 +38,10 @@
 <h3>Совсем недавно на площади нашего с Вами университета прошла военнизированная эстафета. Просим вас написать пару слов по прошедшему мероприятию по форме ниже</h3>
 </FONT>
 		<img src="images/UVC2.jpg">
-		<FONT COLOR="	#0000ff">
-	<h2 align="right">Форма для отзыва
+		<FONT COLOR="	#ffffff">
+	<h2 align="left", class="stroke">Форма для отзыва
 	<form action="" method="post">
-  <table align="right">
+  <table align="left">
     <tbody>
       <tr>
         <td>ФИО, факультет и группа :</td>
@@ -44,9 +65,10 @@
     </tbody>
   </table>
 </form>
-<br><br><br><br><div id="search_place" style="float:right;">
-<input  onclick = "ot(this.value)" type="button" value="Отправить" align="middle">
+<br><br><br><br><div id="search_place" style="float:left;">
+<input  onclick = "ot(this.value)" type="button" value="Отправить" align="middle" class="button button3">
 </div>
+<br>
 	<span id = "tut"></span> 
 <script>
 		let tek = 3;
