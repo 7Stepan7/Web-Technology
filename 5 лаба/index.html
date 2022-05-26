@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+  <title>Охота на утку</title>
+  <link href="css/reset.css" type="text/css" rel="stylesheet" />
+  <link href="css/main.css" type="text/css" rel="stylesheet" />
+  <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+  <script src="js/duck.js" type="text/javascript"></script>
+  <script src="js/game.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+
+  <div id="white_flash"> </div>
+
+  <div id="click"></div>
+
+  <div id="score"> 
+    0 
+  </div>
+
+  <img class="shell shell_1" src="img/shell.png"/>
+  <img class="shell shell_2" src="img/shell.png"/>
+  <img class="shell shell_3" src="img/shell.png"/>
+
+  <div id="game-start"> 
+    <div id="choose-difficulty">
+      <h3> Сложность: </h3>
+       <p class="difficulty">easy</p>
+      <p class="difficulty">medium</p>
+      <p class="difficulty">hard</p>
+    </div>
+  </div>
+
+  <div id="actors">
+    <figure id="duck-template" class="sprite duck right"></figure>
+  </div>
+
+  <div id="game-over">
+    <div id="game-over-message">
+      <h3>Игра окончена</h3>
+
+      <p>Счёт: <span id="points"></span> очки</p>
+
+      <p id="play-again">Попробовать еще?</p>
+    </div>
+  </div>
+
+  <div id="game">
+    <div id="crosshair"></div>
+  </div>
+
+</body>
+</html>
